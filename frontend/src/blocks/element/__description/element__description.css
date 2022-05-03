@@ -1,0 +1,10 @@
+.element__description {
+  max-width: 282px;
+  display: grid;
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  justify-content: space-between;
+  grid-template-columns: calc(100% - 22px - 30px) 52px;
+}

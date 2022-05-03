@@ -1,0 +1,9 @@
+.element__image {
+  display: block;
+  width: 282px;
+  height: 282px;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: center;
+}

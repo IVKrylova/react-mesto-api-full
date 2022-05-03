@@ -1,0 +1,18 @@
+.form__button_theme_dark {
+  background-color: #fff;
+  color: #000;
+  margin-top: 216px;
+  padding: 14px 0 14px;
+}
+
+.form__button_theme_dark:hover {
+  opacity: .85;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .form__button_theme_dark {
+    margin-top: 173px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,12 @@
+.registration-result {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .registration-result {
+    width: 280px;
+  }
+}

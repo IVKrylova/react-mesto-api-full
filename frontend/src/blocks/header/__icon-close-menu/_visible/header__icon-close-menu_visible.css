@@ -1,0 +1,5 @@
+@media screen and (max-width: 640px) {
+  .header__icon-close-menu_visible {
+    display: block;
+  }
+}

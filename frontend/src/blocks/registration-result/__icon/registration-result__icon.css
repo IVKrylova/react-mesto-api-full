@@ -1,0 +1,12 @@
+.registration-result__icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 640px) {
+  .registration-result__icon {
+    margin-top: 50px;
+  }
+}

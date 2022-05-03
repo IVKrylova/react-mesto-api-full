@@ -1,0 +1,9 @@
+.header__desktop-menu {
+  display: flex;
+}
+
+@media screen and (max-width: 640px) {
+  .header__desktop-menu {
+    display: none;
+  }
+}

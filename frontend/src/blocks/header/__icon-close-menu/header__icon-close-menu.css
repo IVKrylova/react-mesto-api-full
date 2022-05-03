@@ -1,0 +1,25 @@
+.header__icon-close-menu {
+  display: none;
+}
+
+
+@media screen and (max-width: 640px) {
+  .header__icon-close-menu {
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    align-self: center;
+    background-image: url(../../../images/button-close.svg);
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    background-size: contain;
+  }
+
+  .header__icon-close-menu:hover {
+    cursor: pointer;
+    opacity: .6;
+  }
+}

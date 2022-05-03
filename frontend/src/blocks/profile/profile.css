@@ -1,0 +1,24 @@
+.profile {
+  margin-top: 40px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 120px calc(100% - 120px - 30px - 30px - 150px) 150px;
+  column-gap: 30px;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    grid-template-columns: 120px calc(100% - 120px - 30px - 30px - 120px) 120px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .profile {
+    grid-template-columns: 1fr;
+    margin: 42px 19px 0;
+    text-align: center;
+    column-gap: 0;
+    justify-items: center;
+  }
+}
