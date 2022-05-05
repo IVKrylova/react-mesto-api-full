@@ -4,7 +4,6 @@ const auth = require('../middlewares/auth');
 const { login, createUser } = require('../controllers/users');
 const usersRoutes = require('./users');
 const cardsRoutes = require('./cards');
-const corsHandler = require('../middlewares/corsHandler');
 const { NotFoundError } = require('../utils/NotFoundError');
 
 // роут для регистрации пользователя
@@ -13,7 +12,7 @@ router.post('/signin', celebrate({
     email: Joi.string().required().email(),
     password: Joi.string().required(),
   }),
-}), login, corsHandler);
+}), login);
 // роут для авторизации пользователя
 router.post('/signup', celebrate({
   body: Joi.object().keys({
@@ -24,13 +23,13 @@ router.post('/signup', celebrate({
     avatar: Joi.string().uri()
       .regex(/https?:\/\/(www.)?[\w\-.~:/?#[\]@!$&'()*+,;=]{1,256}\.[a-z0-9]{2,6}\b([-\w()@:%.+~#=//?&]*)/),
   }),
-}), createUser, corsHandler);
+}), createUser);
 
 // авторизация
-router.use(auth, corsHandler);
+router.use(auth);
 
-router.use(usersRoutes, corsHandler);
-router.use(cardsRoutes, corsHandler);
+router.use(usersRoutes);
+router.use(cardsRoutes);
 
 // oбработка неправильного пути
 router.use((req, res, next) => {

@@ -8,6 +8,7 @@ const helmet = require('helmet');
 const routes = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const corsHandler = require('./middlewares/corsHandler');
 
 const { PORT = 3000 } = process.env;
 
@@ -25,7 +26,7 @@ app.use(bodyParser.json());
 app.use(requestLogger);
 
 // все роуты приложения
-app.use(routes);
+app.use(routes, corsHandler);
 
 // подключаем логгер ошибок
 app.use(errorLogger);
