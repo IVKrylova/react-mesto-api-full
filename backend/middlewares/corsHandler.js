@@ -1,26 +1,30 @@
 // домены, с которых разрешены кросс-доменные запросы
 const allowedCors = [
-  'https://praktikum.tk',
-  'http://praktikum.tk',
+  'http://mesto.ivkrylova.nomoredomains.work',
+  'https://mesto.ivkrylova.nomoredomains.work',
+  'http://localhost:3000',
+  'https://localhost:3000',
   'localhost:3000',
 ];
 
-// eslint-disable-next-line consistent-return
 const corsHandler = (req, res, next) => {
   // сохраняем источник запроса в переменную origin
   const { origin } = req.headers;
+  // проверяем, что источник запроса есть среди разрешённых
+
+  if (allowedCors.includes(origin)) {
+    // устанавливаем заголовок, который разрешает браузеру запросы с этого источника
+    res.header('Access-Control-Allow-Origin', origin);
+    // запрос на получение данных авторизации с другого домена
+    res.header('Access-Control-Allow-Credentials', true);
+  }
+
   // сохраняем тип запроса (HTTP-метод) в соответствующую переменную
   const { method } = req;
   // значение для заголовка Access-Control-Allow-Methods по умолчанию (разрешены все типы запросов)
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
   // сохраняем список заголовков исходного запроса
   const requestHeaders = req.headers['access-control-request-headers'];
-
-  // проверяем, что источник запроса есть среди разрешённых
-  if (allowedCors.includes(origin)) {
-    // устанавливаем заголовок, который разрешает браузеру запросы с этого источника
-    res.header('Access-Control-Allow-Origin', origin);
-  }
 
   // если это предварительный запрос, добавляем нужные заголовки
   if (method === 'OPTIONS') {
@@ -32,7 +36,7 @@ const corsHandler = (req, res, next) => {
     return res.end();
   }
 
-  next();
+  return next();
 };
 
 module.exports = corsHandler;

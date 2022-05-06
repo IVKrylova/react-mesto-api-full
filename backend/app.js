@@ -25,8 +25,11 @@ app.use(bodyParser.json());
 // подключаем логгер запросов
 app.use(requestLogger);
 
+// CORS
+app.use(corsHandler);
+
 // все роуты приложения
-app.use(routes, corsHandler);
+app.use(routes);
 
 // подключаем логгер ошибок
 app.use(errorLogger);
