@@ -4,7 +4,6 @@ const allowedCors = [
   'https://mesto.ivkrylova.nomoredomains.work',
   'http://localhost:3000',
   'https://localhost:3000',
-  'localhost:3000',
 ];
 
 const corsHandler = (req, res, next) => {
