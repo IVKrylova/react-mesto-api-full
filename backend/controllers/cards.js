@@ -7,7 +7,10 @@ const { NotFoundError } = require('../utils/NotFoundError');
 // получаем все карточки
 module.exports.getCards = (req, res, next) => {
   Card.find({})
-    .then((card) => res.send({ data: card }))
+    .then((card) => {
+      card.reverse();
+      res.send({ data: card });
+    })
     .catch(next);
 };
 

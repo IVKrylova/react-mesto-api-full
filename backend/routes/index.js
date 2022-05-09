@@ -6,14 +6,14 @@ const usersRoutes = require('./users');
 const cardsRoutes = require('./cards');
 const { NotFoundError } = require('../utils/NotFoundError');
 
-// роут для регистрации пользователя
+// роут для авторизации пользователя
 router.post('/signin', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
     password: Joi.string().required(),
   }),
 }), login);
-// роут для авторизации пользователя
+// роут для регистрации пользователя
 router.post('/signup', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
