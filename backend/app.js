@@ -28,6 +28,12 @@ app.use(requestLogger);
 // CORS
 app.use(corsHandler);
 
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 // все роуты приложения
 app.use(routes);
 
