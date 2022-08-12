@@ -1,7 +1,43 @@
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположен в директории `backend/`, а фронтенд - в `frontend/`. 
-  
-Публичный IP-адрес сервера: 51.250.82.37
+<img src="./screenshots/mesto.png" alt="Проект: Место" width=600 /><br>
+<img src="https://shields.io/badge/react-black?logo=react&style=for-the-badge%22" alt="React Badge"/> <img src="https://img.shields.io/badge/-Express.js-black?style=flat-square" alt="Express Badge"/><br>
 
-Ссылка на сайт: https://mesto.ivkrylova.nomoredomains.work/
+**Проектная работа для Яндекс.Практикум (спринт 15)** <br>
 
+## Описание
+Проект Mesto - полностью готовое веб-приложение на React с аутентификацией и авторизацией, куда можно добавлять фотографии, удалять их и ставить лайки. Сервер написан на Express.js.
+
+## Используемые технологии
+1. HTML5
+2. Методология БЭМ
+3. Флексбокс-верстка, Grid-css, отзывчивая верстка
+4. JavaScript, React
+5. Fetch API
+6. Express.js
+7. MongoDB
+8. REST API
+
+## Инструменты
+1. MongoDB Compass
+2. Postman
+3. Figma
+4. Pixel perfect
+
+## Функционал приложения
+* Редактирование профиля пользователя
+* Добавление новых фотографий
+* Возможность поставить/удалить лайк
+* Удаление фотографий
+* Просмотр фотографий в popup
+* Валидация форм
+
+## Бэкенд
+Бэкенд расположен в директории `backend/`<br>
+Посмотреть репозиторий с бэкендом можно [здесь](https://github.com/IVKrylova/express-mesto-gha).
+
+## Фронтенд
+Фронтенд расположен в директории `frontend/`<br>
+Посмотреть репозиторий с фронтендом можно [здесь](https://github.com/IVKrylova/react-mesto-auth).
+
+## Демо
+Публичный IP-адрес сервера: 51.250.82.37<br>
+Приложение можно посмотреть [здесь](https://mesto.ivkrylova.nomoredomains.work/).
